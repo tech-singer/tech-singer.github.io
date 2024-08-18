@@ -22,10 +22,8 @@ Singing voice synthesis has achieved remarkable progress in generating natural a
 
 To assess the performance of TechSinger and baseline models in the technique-controllable singing voice task, we randomly select samples with unseen singers from the test set as targets via different controlling strategies. And in order to represent singing techniques more simply, we use the technique id shown below.
 
-technique: 0 : No Technique; 1 : Mixed Voice; 2 : Falsetto; 3 : Breathy; 4 : Pharyngeal; 5 : Vibrato; 6 : Glissando; 7 : Bubble; 8 : Strong; 9 : Weak
+**Technique ID**: 0-No Technique; 1-Mixed Voice; 2-Falsetto; 3-Breathy; 4-Pharyngeal; 5-Vibrato; 6-Glissando; 7-Bubble; 8-Strong; 9-Weak.
                        
-
-
 ## GT
 
 GT represents the technique controlling strategies that the techniques are obtained from the annotated technique sequences.
@@ -183,6 +181,82 @@ GT represents the technique controlling strategies that the techniques are obtai
 	</tbody>
 </table>
 
+***
+
+**Word:** du printemps &lt;AP&gt;
+
+**Phoneme with Technique:** d(5) y(5) p(5) ʁ(5) ɛ̃(5) t(5) ɑ̃(5) &lt;AP>&gt;(0)
+
+<table style='width: 40%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>Ground Truth</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/gt/0004.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style='width: 100%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>DiffSinger</th>
+			<th style='text-align: center'>Visinger2</th>
+			<th style='text-align: center'>StyleSinger</th>
+			<th style='text-align: center'>TechSinger(Ours)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/diffsinger/0004.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/visinger/0004.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/stylesinger/0004.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/techsinger/0004.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+**Word:** que frescura la noche trae &lt;AP&gt; cuando cae sol 
+
+**Phoneme with Technique:** c(0) e(0) f(0) ɾ(0) e(0) s(0) k(0) u(0) ɾ(0) a(0) l(0) a(0) n(0) o(6) tʃ(0) e(6) t(0) ɾ(0) a(0) e(0) &lt;AP&gt;(0) k(1) w(1) a(1) n(1) d(1) o(1) k(1,3) a(1,3) e(1,3) s(1,3) o(1,3) l(1,3)
+
+<table style='width: 40%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>Ground Truth</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/gt/0005.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+<table style='width: 100%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>DiffSinger</th>
+			<th style='text-align: center'>Visinger2</th>
+			<th style='text-align: center'>StyleSinger</th>
+			<th style='text-align: center'>TechSinger(Ours)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/diffsinger/0005.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/visinger/0005.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/stylesinger/0005.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/techsinger/0005.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+***
+
 ## Random
 
 Random represents the technique controlling strategies that the model generates the techniques automatically and randomly.
@@ -213,11 +287,63 @@ Random represents the technique controlling strategies that the model generates 
 
 ***
 
+**Word:** 离 别 没 说 再 见 &lt;AP&gt; 你 是 否 心 酸
+
+**Phoneme with Technique:** l(1,3) i(1,3) b(1,3) ie(1,3) m(1) ei(1) sh(1) uo(1) z(0) ai(0) j(0) ian(5) &lt;AP&gt;(0) n(0) i(0) sh(1) i(1) f(1) ou(1) x(1) in(1,5) s(1) uan(1,5)
+
+
+<table style='width: 100%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>DiffSinger</th>
+			<th style='text-align: center'>Visinger2</th>
+			<th style='text-align: center'>StyleSinger</th>
+			<th style='text-align: center'>TechSinger(Ours)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/diffsinger/0001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/visinger/0001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/Stylesinger/0001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/techsinger/0001.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+***
+
+**Word:** &lt;SP&gt; edelweiß &lt;AP&gt; edelweiß &lt;AP&gt;
+
+**Phoneme with Technique:** &lt;SP&gt;(0) eː(4) d(4) ɛ(4) l(4) v(4) a(4) ɪ(4) s(0) &lt;AP&gt;(0) eː(1,6) d(1,6) ɛ(4,6) ɛ(4,6) l(4,6) v(4,6) a(4,6) ɪ(4,6) s(0) &lt;AP&gt;(0)
+
+
+<table style='width: 100%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>DiffSinger</th>
+			<th style='text-align: center'>Visinger2</th>
+			<th style='text-align: center'>StyleSinger</th>
+			<th style='text-align: center'>TechSinger(Ours)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/Stylesinger/0002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/visinger/0002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/diffsinger/0002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/techsinger/0002.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
+***
+
+
 
 ## Prompt-Guided
 
 Prompt-Guided represents the technique controlling strategies that the techniques are predicted by our predictor based on the given prompts.
-
 
 **Word:** 就 在 那 里 曾 是 你 和 我 &lt;AP&gt; 爱 过 的 地 方
 
@@ -303,195 +429,35 @@ Prompt: Create a pop song where a Chinese female singer sings using mixed voice 
 	</tbody>
 </table>
 
+**Word:** i will be brave &lt;AP&gt; i will not let anything take
+
+**Phoneme:** AY1 W IH1 L B IY1 B R EY1 V &lt;AP&gt; AY1 W IH1 L N AA1 T L EH1 EH1 N IY0 TH IH2 NG T EY1 K
+
+Prompt: Create a English song performed by a alto using vibrato.
+
+
+<table style='width: 100%;'>
+	<thead>
+		<tr>
+			<th style='text-align: center'>DiffSinger</th>
+			<th style='text-align: center'>Visinger2</th>
+			<th style='text-align: center'>StyleSinger</th>
+			<th style='text-align: center'>TechSinger(Ours)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/diffsinger/0003_cut.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/visinger/0003_cut.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/Stylesinger/0003_cut.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/techsinger/0003_cut.wav' type='audio/wav'></audio></td>
+		</tr>
+	</tbody>
+</table>
+
 ***
 
 
-4.Target Word: 谁 娶 了 多 愁 善 感 的 你
-
-Prompt: 谁 把 你 的 长 发 盘 起
-
-Successfully transferring the timbre, pronunciation, pitch transition style, and rhythm.
-
-<table style='width: 40%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/004.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/004.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-<table style='width: 100%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Styler</th>
-		<th style='text-align: center'>YourTTS</th>
-			<th style='text-align: center'>Mega-TTS</th>
-			<th style='text-align: center'>StyleSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/styler/004.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/yourtts/004.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/mega/004.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/style/004.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/tc/004.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-5.Target Word: settled down that you AP found a girl and you AP
-
-Prompt: I head AP that you are AP
-
-Successfully transferring the timbre, pronunciation, pitch transition style, rhythm, and glissando technique.
-
-<table style='width: 40%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/005.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/005.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-<table style='width: 100%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Styler</th>
-		<th style='text-align: center'>YourTTS</th>
-			<th style='text-align: center'>Mega-TTS</th>
-			<th style='text-align: center'>StyleSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/styler/005.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/yourtts/005.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/mega/005.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/style/005.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/tc/005.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-6.Target Word: you belong with me belong with me
-
-Prompt: standing by and waiting at your back door SP all this time how could you not know baby
-Successfully transferring the timbre, pronunciation, pitch transition style, rhythm, and vibrato technique.
-
-<table style='width: 40%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/prompt/006.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/gt/006.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-<table style='width: 100%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Styler</th>
-		<th style='text-align: center'>YourTTS</th>
-			<th style='text-align: center'>Mega-TTS</th>
-			<th style='text-align: center'>StyleSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/styler/006.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/yourtts/006.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/mega/006.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/style/006.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/tc/006.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
----
-
-
-We add global and phoneme-level text embedding to each baseline model to enable style control. 
-Then, we compare TCSinger using multi-level text prompts.
-We conduct both parallel and non-parallel experiments according to the target styles.
-For global styles, we specify singing methods (bel canto and pop) and emotions (happy and sad) for each test target. 
-For phoneme-level styles, we select none, one or more specific techniques (mixed voice, falsetto, breathy, vibrato, glissando, and pharyngeal) for each phoneme of target content. 
-
-## Parallel Style Control
-
-In the parallel experiments, we randomly select unseen audio from the test set, using the GT global style and phoneme-level techniques as the target. 
-
-1.Target Word: 你 是 魔 鬼 中 的 天 使 所 以 送 我 心 碎 的 方 式 AP 是 让 我 笑 到 最 后 AP
-
-Global Text Prompt (Singing Method and Emotion): bel canto, sad
-
-Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['AP(0)', 'n(1)', 'i(1)', 'sh(1)', 'i(1)', 'm(1)', 'o(1)', 'g(1)', 'uei(1)', 'zh(1)', 'ong(1)', 'd(1)', 'e(1)', 't(1)', 'ian(1)', 'sh(1)', 'i(1)', 's(1)', 'uo(1)', 'i(1)', 's(1)', 'ong(1)', 'uo(1)', 'x(1)', 'in(1)', 's(1)', 'uei(1)', 'd(1)', 'e(1)', 'f(1)', 'ang(1)', 'sh(1)', 'i(1)', 'AP(0)', 'sh(1)', 'i(1)', 'r(1)', 'ang(1)', 'uo(1)', 'x(1)', 'iao(1)', 'd(1)', 'ao(1)', 'z(1)', 'uei(1)', 'h(1)', 'ou(1)', 'AP(0)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
-Successfully control global singing method and emotion, and the phoneme-level techniques of glissando and mixed voice.
-
-<table style='width: 20%;'>
-	<thead>
-		<tr>
-		<th style='text-align: center'>Ground Truth</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/gt/001.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-<table style='width: 100%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Styler</th>
-		<th style='text-align: center'>YourTTS</th>
-			<th style='text-align: center'>Mega-TTS</th>
-			<th style='text-align: center'>StyleSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/styler/001.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/yourtts/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/mega/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/style/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/text/tc/001.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
----
 
 # Ablation Study
 
