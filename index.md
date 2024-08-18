@@ -263,7 +263,7 @@ Random represents the technique controlling strategies that the model generates 
 
 **Word:** 我 知 道 &lt;AP&gt; 那 些 夏 天 &lt;AP&gt; 就 像 青 春 一 样 回 不 来
 
-**Phoneme with Technique:** uo(1,7) zh(1) i(1) d(1) ao(1) &lt;AP&gt; n(7) a(7) x(1) ie(1) x(1,3) ia(1,3) t(1,3) ian(1,3) &lt;AP&gt; j(1,7) iou(1,7) x(1) iang(1) q(8) ing(8) ch(8) un(8) i(1,3) iang(1,3) h(1,9) ui(1,9) b(1,9) u(1,9) l(1,9) ai(1,9)
+**Generated Technique Sequence:** uo(1,7) zh(1) i(1) d(1) ao(1) &lt;AP&gt; n(7) a(7) x(1) ie(1) x(1,3) ia(1,3) t(1,3) ian(1,3) &lt;AP&gt; j(1,7) iou(1,7) x(1) iang(1) q(8) ing(8) ch(8) un(8) i(1,3) iang(1,3) h(1,9) ui(1,9) b(1,9) u(1,9) l(1,9) ai(1,9)
 
 
 <table style='width: 100%;'>
@@ -289,7 +289,7 @@ Random represents the technique controlling strategies that the model generates 
 
 **Word:** 离 别 没 说 再 见 &lt;AP&gt; 你 是 否 心 酸
 
-**Phoneme with Technique:** l(1,3) i(1,3) b(1,3) ie(1,3) m(1) ei(1) sh(1) uo(1) z(0) ai(0) j(0) ian(5) &lt;AP&gt;(0) n(0) i(0) sh(1) i(1) f(1) ou(1) x(1) in(1,5) s(1) uan(1,5)
+**Generated Technique Sequence:** l(1,3) i(1,3) b(1,3) ie(1,3) m(1) ei(1) sh(1) uo(1) z(0) ai(0) j(0) ian(5) &lt;AP&gt;(0) n(0) i(0) sh(1) i(1) f(1) ou(1) x(1) in(1,5) s(1) uan(1,5)
 
 
 <table style='width: 100%;'>
@@ -315,7 +315,7 @@ Random represents the technique controlling strategies that the model generates 
 
 **Word:** &lt;SP&gt; edelweiß &lt;AP&gt; edelweiß &lt;AP&gt;
 
-**Phoneme with Technique:** &lt;SP&gt;(0) eː(4) d(4) ɛ(4) l(4) v(4) a(4) ɪ(4) s(0) &lt;AP&gt;(0) eː(1,6) d(1,6) ɛ(4,6) ɛ(4,6) l(4,6) v(4,6) a(4,6) ɪ(4,6) s(0) &lt;AP&gt;(0)
+**Generated Technique Sequence:** &lt;SP&gt;(0) eː(4) d(4) ɛ(4) l(4) v(4) a(4) ɪ(4) s(0) &lt;AP&gt;(0) eː(1,6) d(1,6) ɛ(4,6) ɛ(4,6) l(4,6) v(4,6) a(4,6) ɪ(4,6) s(0) &lt;AP&gt;(0)
 
 
 <table style='width: 100%;'>
@@ -347,9 +347,9 @@ Prompt-Guided represents the technique controlling strategies that the technique
 
 **Word:** 就 在 那 里 曾 是 你 和 我 &lt;AP&gt; 爱 过 的 地 方
 
-**Phoneme:** j iou z ai n a l i c eng sh i n i h e uo &lt;AP&gt; ai g uo d e d i f ang
+**Prompt:** Generate a Chinese song where a female singer sings in medium vocal range using breathy technique. 
 
-Prompt: Generate a Chinese song where a female singer sings in medium vocal range using breathy technique. 
+**Predicted Technique Sequence:** j(3) iou(3) z(3) ai(3) n(3) a(3) l(3) i(3) c(3) eng(3) sh(3) i(3) n(3) i(3) h(3) e(3) uo(3) &lt;AP&gt;(0) ai(3) g(3) uo(3) d(3) e(3) d(3) i(3) f(3) ang(3)
 
 
 <table style='width: 100%;'>
@@ -376,9 +376,11 @@ Prompt: Generate a Chinese song where a female singer sings in medium vocal rang
 
 **Word:** 一 壶 清 酒 一 身 尘 灰
 
-**Phoneme:** i h u q ing j iou i sh en ch en h uei
+**Prompt:** Generate a Chinese pop song where a Tenor sings using mixed voice.
 
-Prompt: Generate a Chinese pop song where a Tenor sings using mixed voice.
+**Predicted Technique Sequence:** i(1) h(1) u(1) q(1) ing(1) j(1) iou(1) i(1) sh(1) en(1) ch(1) en(1) h(1) uei(1,5)
+
+
 
 
 <table style='width: 100%;'>
@@ -405,9 +407,9 @@ Prompt: Generate a Chinese pop song where a Tenor sings using mixed voice.
 
 **Word:** 一 个 多 情 的 痴 情 的 绝 情 的 无 情 的 人 来 给 我 伤 痕
 
-**Phoneme:** i g e d uo q ing d e ch i q ing d e j ve q ing d e r en l ai g ei uo sh ang h en
+**Prompt:** Create a pop song where a Chinese female singer sings using mixed voice and strong vocal.
 
-Prompt: Create a pop song where a Chinese female singer sings using mixed voice and strong vocal.
+**Predicted Technique Sequence:** i(1,8) g(1,8) e(1,8) d(1,8) uo(1,8) q(1,8) ing(1,8) d(1,8) e(1,8) ch(1,8) i(1,8) q(1,8) ing(1,8) d(1,8) e(1,8) j(1,8) ve(1,8) q(1,8) ing(1,8) d(1,8) e(1,8) r(1,8) en(1,8) l(1) ai(1) g(1) ei(1) uo(1) sh(1) ang(1) h(1) en(1)
 
 
 <table style='width: 100%;'>
@@ -431,9 +433,9 @@ Prompt: Create a pop song where a Chinese female singer sings using mixed voice 
 
 **Word:** i will be brave &lt;AP&gt; i will not let anything take
 
-**Phoneme:** AY1 W IH1 L B IY1 B R EY1 V &lt;AP&gt; AY1 W IH1 L N AA1 T L EH1 EH1 N IY0 TH IH2 NG T EY1 K
+**Prompt:** Create a English song performed by a alto using vibrato.
 
-Prompt: Create a English song performed by a alto using vibrato.
+**Predicted Technique Sequence** AY1(0) W(0) IH1(0) L(0) B(0) IY1(0) B(0) R(0) EY1(5) V(0) &lt;AP&gt; AY1(5) W(0) IH1(5) L(0) N(0) AA1(0) T(0) L(0) EH1(0) EH1(0) N(0) IY0(0) TH(0) IH2(0) NG(0) T(0) EY1(5) K(0)
 
 
 <table style='width: 100%;'>
