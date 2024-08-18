@@ -461,420 +461,55 @@ Prompt: Create a English song performed by a alto using vibrato.
 
 # Ablation Study
 
-we undertake ablation studies to showcase the efficacy of various designs incorporated within TCSinger. 
-SAD denotes using the style adaptive decoder or only diffusion decoder, DM means using the duration model in S\&D-LM or using a simple duration predictor of Fastspeech2, and CVQ means using the CVQ model or VQ model in the clustering style encoder.
+we undertake ablation studies in Singing Voice Synthesis(SVS) to showcase the efficacy of various designs incorporated within TechSinger.
+Pitch denotes using the flow-matching pitch predictor or only diffusion decoder, Postnet means using the postnet or not, and CFG means take the classifier-free guidance strategy or not.
 
-1.Target Word: 我 的 背 脊 如 荒 丘 而 你 却 微 笑 摆 首 AP 把 它 当 成 整 个 宇 宙 你 与 太 阳 挥 手 也 同 海 鸥 问 候
+**Word:** 你 会 不 会 忽 然 的 出 现
 
-Prompt: 直 到 那 一 天 SP 你 的 衣 衫 破 旧 而 歌 声 却 温 柔 陪 我 漫 无 目 的 的 四 处 漂 流
-
-Successfully synthesizing the timbre, articulation method, pronunciation, pitch transition style, and rhythm.
-
-<table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/prompt/001.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
+**Phoneme:** n i h uei b u h uei h u r an d e ch u x ian 
 
 <table style='width: 100%;'>
 	<thead>
 		<tr>
 			<th style='text-align: center'>Gronud Truth</th>
-			<th style='text-align: center'>TCSinger</th>
-			<th style='text-align: center'>w/o SAD</th>
-			<th style='text-align: center'>w/o DM</th>
-			<th style='text-align: center'>w/o CVQ</th>
+			<th style='text-align: center'>TechSinger</th>
+			<th style='text-align: center'>w/o Pitch</th>
+			<th style='text-align: center'>w/o Postnet</th>
+			<th style='text-align: center'>w/o CFG</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/gt/001.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/tc/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/sad/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/dm/001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/se/001.wav' type='audio/wav'></audio></td>
+			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/tech/001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/pitch/001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/post/001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/CFG/001.wav' type='audio/wav'></audio></td>
 		</tr>
 	</tbody>
 </table>
 
-2.Target Word: 把 一 个 人 的 温 暖 转 移 到 另 一 个 的 胸 膛 AP 让 上 次 犯 的 错 反 省 出 梦 想 AP 每 个 人 都 是 这 样
+**Word:** 为 了 爱 孤 军 奋 斗 &lt;AP&gt; 早 就 吃 够 了 爱 情 的 苦
 
-Prompt: 才 能 知 道 伤 感 是 爱 的 遗 产 AP 流 浪 过 几 张 双 人 床 换 过 几 次 信 仰 才 让 戒 指 义 无 反 顾 的 交 换 AP
-
-Successfully synthesizing the timbre, articulation method, pronunciation, pitch transition style, and rhythm.
-
-<table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/prompt/002.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
+**Phoneme:** uei l e ai g u j vn f en d ou &lt;AP&gt; z ao j iou ch i g ou l e ai q ing d e k u
 
 <table style='width: 100%;'>
 	<thead>
 		<tr>
 			<th style='text-align: center'>Gronud Truth</th>
-			<th style='text-align: center'>TCSinger</th>
-			<th style='text-align: center'>w/o SAD</th>
-			<th style='text-align: center'>w/o DM</th>
-			<th style='text-align: center'>w/o CVQ</th>
+			<th style='text-align: center'>TechSinger</th>
+			<th style='text-align: center'>w/o Pitch</th>
+			<th style='text-align: center'>w/o Postnet</th>
+			<th style='text-align: center'>w/o CFG</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/gt/002.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/tc/002.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/sad/002.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/dm/002.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/se/002.wav' type='audio/wav'></audio></td>
+			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/tech/002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/pitch/002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/post/002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/abl/CFG/002.wav' type='audio/wav'></audio></td>
 		</tr>
 	</tbody>
 </table>
-
----
-
-# Clustering Style Encoder
-
-In these tests, we utilized the timbre of singer A and the style information of singer B to synthesize results that match the timbre of singer A while differing from that of singer B.
-This outcome evidentially shows that our clustering style encoder successfully decouples timbre and style in the mel spectrogram. 
-
-1.Target Word: 我 们 这 些 努 力 不 简 单 快 乐 炼 成 泪 水 是 一 种 勇 敢
-
-Successfully synthesizing the timbre of singer A, the pronunciation, pitch transition style, and rhythm of singer B.
-
-<table style='width: 60%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Singer A</th>
-			<th style='text-align: center'>Singer B</th>
-			<th style='text-align: center'>Result</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo1/rt.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo1/rs.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo1/re.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-2.Target Word: 这 瞬 眼 的 光 景 最 亲 密 的 距 离 沿 着 你 皮 肤 纹 理
-
-Successfully synthesizing the timbre of singer A, the pronunciation, pitch transition style, and rhythm of singer B.
-
-<table style='width: 60%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Singer A</th>
-			<th style='text-align: center'>Singer B</th>
-			<th style='text-align: center'>Result</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo2/rt.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo2/rs.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/se/demo2/re.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
----
-
-# Style Control Extended Experiments 
-
-In these tests, we compare different text prompts to show TCSinger's controllability.
-
-## Emotion Difference
-
-Target Word: 东 汉 末 年 分 三 国 SP 烽 火 连 天 不 休
-
-Obviously, TCSinger can control different emotions.
-
-<table style='width: 40%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Happy</th>
-			<th style='text-align: center'>Sad</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/000.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/001.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-## Technique Difference
-
-Target Word: 为 了 爱 孤 军 奋 斗 AP 早 就 吃 够 了 爱 情 的 苦
-
-Obviously, TCSinger can control different techniques for each phoneme.
-
-1.Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['uei(1)','l(1)','e(1)','ai(1)','g(1)','u(1)','j(1)','vn(1)','f(1)','en(1)','d(1)','ou(1)','AP(0)','z(1)','ao(1)','j(1)','iou(1)','ch(1)','i(1)','g(1)','ou(1)','l(1)','e(1)','ai(1)','q(1)','ing(1)','d(1)','e(1)','k(1)','u(1)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
-<table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/002.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-2.Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['uei(3)','l(3)','e(3)','ai(3)','g(3)','u(3)','j(3)','vn(3)','f(3)','en(3)','d(3)','ou(3)','AP(0)','z(3)','ao(3)','j(3)','iou(3)','ch(3)','i(3)','g(3)','ou(3)','l(3)','e(3)','ai(3)','q(3)','ing(3)','d(3)','e(3)','k(3)','u(3)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
-<table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/003.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-3.Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['uei(0)','l(0)','e(0)','ai(0)','g(1)','u(1)','j(1)','vn(1)','f(1)','en(1)','d(1)','ou(1)','AP(0)','z(0)','ao(0)','j(0)','iou(0)','ch(0)','i(0)','g(0)','ou(0)','l(2)','e(2)','ai(2)','q(2)','ing(2)','d(2)','e(2)','k(2)','u(2)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
- <table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/004.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-4.Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['uei(0)','l(0)','e(0)','ai(0)','g(3)','u(3)','j(3)','vn(3)','f(3)','en(3)','d(3)','ou(3)','AP(0)','z(0)','ao(0)','j(0)','iou(0)','ch(0)','i(0)','g(0)','ou(0)','l(0)','e(0)','ai(3)','q(3)','ing(3)','d(3)','e(3)','k(3)','u(3)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
- <table style='width: 20%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/extend/005.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
----
-
-# RMSSinger experiments
-
-In these tests, we utilized RMSSinger, the best traditional SVS model with spk embedding for evaluation.  
-
-## Zero-Shot Style Transfer
-
-1.Target Word: 说 什 么 情 深 似 海 我 却 不 敢 当 AP 最 浪 漫 不 过 与 你 并 肩 看 夕 阳 我 心 之 所 向
-
-Prompt: AP 原 来 所 谓 爱 情 AP 是 这 模 样 AP 就 承 认 一 笑 倾 城 一 见 自 难 忘 AP
-
-TCSinger successfully transfers the timbre, and resonance in pop singing method, pronunciation, rhythm, and pitch transition style.
-
-<table style='width: 80%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/prompt/001.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/001.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/001.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/001.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-2.Target Word: AP 我 是 只 化 身 孤 岛 的 蓝 鲸 有 着 最 巨 大 的 身 影 AP 鱼 虾 在 身 侧 穿 行
-
-Prompt: 而 大 海 太 平 太 静 多 少 故 事 无 人 倾 听 AP 我 爱 地 中 海 的 天 晴
-
-TCSinger successfully transfers the timbre, and resonance in pop singing method, pronunciation, rhythm, and pitch transition style.
-
-<table style='width: 80%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/prompt/002.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/002.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/002.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/002.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-## Multi-level Style Control
-
-1.Target Word: SP 向 左 SP 向 右 向 前 看 SP 爱 要 拐 几 个 弯 才 来 SP
-
-Global Text Prompt (Singing Method and Emotion): pop, sad
-
-Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['SP(0)','x(1)','iang(1)','z(0)','uo(0)','SP(0)','x(2)','iang(2)','iou(2,6)','x(2)','iang(2,6)','q(2)','ian(2)','k(2)','an(2,6)','SP(0)','ai(0)','iao(0)','g(0)','uai(0)','j(0)','i(0)','g(0)','e(0)','uan(0)','c(0)','ai(6)','l(0)','ai(0)','SP(0)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
-Successfully control global singing method and emotion, and the phoneme-level techniques of glissando and falsetto.
-
-<table style='width: 60%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/003.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/003.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/003.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-2.Target Word: AP 你 唤 醒 了 我 的 耳 朵 哦 带 走 我 AP
-
-Global Text Prompt (Singing Method and Emotion): bel canto, sad
-
-Phoneme-Level Text Prompt (Technique Sequence): 
-```
-['AP(0),'n(1)','i(1)','h(1)','uan(1)','x(1)','ing(1)','l(1)','e(1)','uo(1)','d(1)','e(1)','er(1)','d(1)','uo(1,6)','o(1)','d(1)','ai(1,6)','z(1)','ou(1,5,6)','AP(0)']
-```
-
-(0: no technique, 1: mix, 2: falsetto, 3: breathy, 4: pharyngeal, 5: vibrato, 6: glissando)
-
-Successfully control global singing method and emotion, and the phoneme-level techniques of vibrato and mixed voice.
-
-<table style='width: 60%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/004.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/004.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/004.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-## Speech-to-Singing Style Transfer
-
-1.Target Word: I don't care if I know
-
-Prompt: city of stars
-
-TCSinger successfully transfers the timbre, pronunciation, pitch transition style, and rhythm.
-
-<table style='width: 80%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/prompt/005.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/005.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/005.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/005.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
-2.Target Word: I'm turning my head up and down
-
-Prompt: yesterday you told me about the blue blue sky
-
-TCSinger successfully transfers the timbre, pronunciation, pitch transition style, and rhythm.
-
-<table style='width: 80%;'>
-	<thead>
-		<tr>
-			<th style='text-align: center'>Prompt</th>
-			<th style='text-align: center'>Ground Truth</th>
-			<th style='text-align: center'>RMSSinger</th>
-			<th style='text-align: center'>TCSinger</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/prompt/006.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/gt/006.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/rms/006.wav' type='audio/wav'></audio></td>
-			<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/rms/tc/006.wav' type='audio/wav'></audio></td>
-		</tr>
-	</tbody>
-</table>
-
