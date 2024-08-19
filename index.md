@@ -279,7 +279,7 @@ Random represents the technique controlling strategies that the model generates 
 		<tr>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/diffsinger/0000.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/visinger/0000.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/Stylesinger/0000.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/stylesinger/0000.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/techsinger/0000.wav' type='audio/wav'></audio></td>
 		</tr>
 	</tbody>
@@ -305,7 +305,7 @@ Random represents the technique controlling strategies that the model generates 
 		<tr>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/diffsinger/0001.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/visinger/0001.wav' type='audio/wav'></audio></td>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/Stylesinger/0001.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/stylesinger/0001.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/techsinger/0001.wav' type='audio/wav'></audio></td>
 		</tr>
 	</tbody>
@@ -329,7 +329,7 @@ Random represents the technique controlling strategies that the model generates 
 	</thead>
 	<tbody>
 		<tr>
-				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/Stylesinger/0002.wav' type='audio/wav'></audio></td>
+				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/stylesinger/0002.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/visinger/0002.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/diffsinger/0002.wav' type='audio/wav'></audio></td>
 				<td style='text-align: center'><audio controls style='width: 150px;'><source src='wavs/svs/random/techsinger/0002.wav' type='audio/wav'></audio></td>
